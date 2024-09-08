@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 // Proxy requests to the target website
 app.use('/proxy', createProxyMiddleware({
-    target: 'https://josporn.club/videos/',
+    target: 'https://en.pornohd.blue/',
     changeOrigin: true,
     pathRewrite: {
         '^/proxy': '', // remove /proxy from the URL
