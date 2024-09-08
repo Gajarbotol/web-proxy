@@ -63,5 +63,27 @@
     Developed by <a href="https://gajarbotolx.t.me" target="_blank">GAJARBOTOL X | SHOHANUR RAHMAN</a>
 </div>
 
+<script>
+    const iframe = document.getElementById('myIframe');
+
+    // Add event listener when iframe content is loaded
+    iframe.onload = function() {
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+        // Add click event listener to all links in the iframe
+        iframeDocument.addEventListener('click', function(event) {
+            const target = event.target;
+
+            // Check if the clicked element is a link
+            if (target.tagName === 'A' && target.href) {
+                event.preventDefault();  // Prevent the default behavior of opening the link
+
+                // Load the clicked link inside the iframe
+                iframe.src = '/proxy?url=' + encodeURIComponent(target.href);
+            }
+        });
+    };
+</script>
+
 </body>
 </html>
