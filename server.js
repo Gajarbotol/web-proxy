@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 // Proxy requests to the target website
 app.use('/proxy', createProxyMiddleware({
-    target: 'http://en.oxtube.tv/',
+    target: 'https://www.txnhh.com/',
     changeOrigin: true,
     pathRewrite: {
         '^/proxy': '', // remove /proxy from the URL
