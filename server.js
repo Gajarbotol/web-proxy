@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 // Middleware to fetch and modify the content from the target website
 app.get('/proxy*', async (req, res) => {
     try {
-        const targetUrl = 'https://en.pornohd.blue/' + req.url.replace('/proxy', '');
+        const targetUrl = 'http://en.oxtube.tv/' + req.url.replace('/proxy', '');
         const response = await axios.get(targetUrl);
 
         // If the response is HTML, rewrite links
