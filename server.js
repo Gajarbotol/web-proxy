@@ -5,7 +5,7 @@ const app = express();
 
 // Proxy requests to the target URL
 app.use('/', createProxyMiddleware({
-    target: 'https://xnxx.com', // target website
+    target: 'en.oxtube.tv', // target website
     changeOrigin: true,
     onProxyReq: function (proxyReq, req, res) {
         // Modify headers, etc. if needed
